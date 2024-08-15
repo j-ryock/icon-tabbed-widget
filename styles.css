@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #8f44fd;
+  --tab-width: 640px;
+  --button-width: 64px;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  /* font-family: "Euclid Circular A"; */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background: #24262a;
+  color: #f9f9f9;
+}
+
+.widget {
+  background: #17181a;
+  width: var(--tab-width);
+  border-radius: 8px;
+}
+
+input {
+  display: none; /* remove radio btns */
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.content {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.content-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  /* align-items: center; */
+  width: calc(var(--tab-width) * 10);
+  /* width: 1000px; */
+  transition: 0.3s;
+  /* border: 1px solid red; */
+}
+
+.content-inner > div {
+  width: inherit;
+  padding: 20px;
+  /* border: 1px solid red; */
+}
+
+label {
+  padding: 20px;
+  font-size: 15px;
+  width: var(--button-width);
+  opacity: 0.35;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  color: #888889;
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid #575757;
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 64px;
+  height: 3px;
+  background: var(--color-primary);
+  transition: 0.2s;
+}
+
+.tabs input:nth-child(1):checked ~ .buttons .underline {
+  translate: 0 0;
+}
+.tabs input:nth-child(2):checked ~ .buttons .underline {
+  translate: var(--button-width) 0;
+}
+.tabs input:nth-child(3):checked ~ .buttons .underline {
+  translate: calc(var(--button-width) * 2) 0;
+}
+.tabs input:nth-child(4):checked ~ .buttons .underline {
+  translate: calc(var(--button-width) * 3) 0;
+}
+.tabs input:nth-child(5):checked ~ .buttons .underline {
+  translate: calc(var(--button-width) * 4) 0;
+}
+.tabs input:nth-child(6):checked ~ .buttons .underline {
+  translate: calc(var(--button-width) * 5) 0;
+}
+.tabs input:nth-child(7):checked ~ .buttons .underline {
+  translate: calc(var(--button-width) * 6) 0;
+}
+.tabs input:nth-child(8):checked ~ .buttons .underline {
+  translate: calc(var(--button-width) * 7) 0;
+}
+.tabs input:nth-child(9):checked ~ .buttons .underline {
+  translate: calc(var(--button-width) * 8) 0;
+}
+.tabs input:nth-child(10):checked ~ .buttons .underline {
+  translate: calc(var(--button-width) * 9) 0;
+}
+
+.tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3), 
+.tabs input:nth-child(4):checked ~ .buttons label:nth-child(4),
+.tabs input:nth-child(5):checked ~ .buttons label:nth-child(5),
+.tabs input:nth-child(6):checked ~ .buttons label:nth-child(6), 
+.tabs input:nth-child(7):checked ~ .buttons label:nth-child(7), 
+.tabs input:nth-child(8):checked ~ .buttons label:nth-child(8), 
+.tabs input:nth-child(9):checked ~ .buttons label:nth-child(9), 
+.tabs input:nth-child(10):checked ~ .buttons label:nth-child(10) {
+  opacity: 1;
+}
+
+.tabs input:nth-child(1):checked ~ .content > .content-inner {
+  translate: 0 0;
+}
+
+.tabs input:nth-child(2):checked ~ .content > .content-inner {
+  translate: calc(0px - var(--tab-width)) 0;
+}
+
+.tabs input:nth-child(3):checked ~ .content > .content-inner {
+  translate: calc(0px - var(--tab-width) * 2) 0;
+}
+
+.tabs input:nth-child(4):checked ~ .content > .content-inner {
+  translate: calc(0px - var(--tab-width) * 3) 0;
+}
+.tabs input:nth-child(5):checked ~ .content > .content-inner {
+  translate: calc(0px - var(--tab-width) * 4) 0;
+}
+
+.tabs input:nth-child(6):checked ~ .content > .content-inner {
+  translate: calc(0px - var(--tab-width) * 5) 0;
+}
+
+.tabs input:nth-child(7):checked ~ .content > .content-inner {
+  translate: calc(0px - var(--tab-width) * 6) 0;
+}
+
+.tabs input:nth-child(8):checked ~ .content > .content-inner {
+  translate: calc(0px - var(--tab-width) * 7) 0;
+}
+
+.tabs input:nth-child(9):checked ~ .content > .content-inner {
+  translate: calc(0px - var(--tab-width) * 8) 0;
+}
+
+.tabs input:nth-child(10):checked ~ .content > .content-inner {
+  translate: calc(0px - var(--tab-width) * 9) 0;
+}
